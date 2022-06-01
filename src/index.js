@@ -18,7 +18,7 @@ const refs = {
 refs.searchInput.addEventListener('input', debounce(onSearchInput, DEBOUNCE_DELAY));
 
 function onSearchInput(event) {
-    const name = event.target.value;
+    const name = event.target.value.trim();
 
     fetchCountries(name).then(allcountries => {
         clearPage();
