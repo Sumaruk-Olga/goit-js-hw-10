@@ -1,5 +1,3 @@
-
-
 // Якщо бекенд повернув від 2-х до 10-и країн, під тестовим //полем
 відображається список знайдених країн.Кожен елемент //списку складається з
 прапора та назви країни.
@@ -8,15 +6,6 @@
 відображається розмітка картки з даними про //країну: прапор, назва, столиця,
 населення і мови.
 
-
-
-
-
-// Loading.circle(); 
-// Loading.standard({ 
-    // clickToClose: true, 
-    // svgSize:'19px', 
-// }); 
-// Loading.standard('Loading...', { 
-    // backgroundColor:'rgba(0,0,0,0.8)', // }); 
-// Loading.standard('Loading...');
+// Loading.circle(); // Loading.standard({ // clickToClose: true, //
+svgSize:'19px', // }); // Loading.standard('Loading...', { //
+backgroundColor:'rgba(0,0,0,0.8)', // }); // Loading.standard('Loading...');
