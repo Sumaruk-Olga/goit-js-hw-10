@@ -19,7 +19,7 @@ refs.searchInput.addEventListener('input', debounce(onSearchInput, DEBOUNCE_DELA
 function onSearchInput(event) {
     const name = event.target.value.trim();
 
-    fetchCountries(name).then(allcountries => {
+        fetchCountries(name).then(allcountries => {
         clearPage();
     if (allcountries.length > 10) {            
        Notify.info('Too many matches found. Please enter a more specific name.');
@@ -29,14 +29,14 @@ function onSearchInput(event) {
     }
         if (allcountries.length === 1) {           
             refs.countryCard.insertAdjacentHTML("beforeend", renderCountryCard(allcountries));
-    }
-}).catch(error => {
-    if (error.message === "404") {
-        Notify.failure('Oops, there is no country with that name');
-    } else {
-        console.log(error);
-    } 
-})
+        }
+    }).catch((error) => {
+            if (error.message === "404") {
+                Notify.failure('Oops, there is no country with that name');
+            } else {
+                console.log(error);
+            };
+        });
 }
 
 function clearPage(){
